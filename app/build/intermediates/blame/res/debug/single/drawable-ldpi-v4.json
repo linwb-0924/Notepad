@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\android\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\app_notes.png",
+        "source": "D:\\android\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\app_notes.png"
+    },
+    {
+        "merged": "E:\\AndroidStudio\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\live_folder_notes.png",
+        "source": "E:\\AndroidStudio\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\live_folder_notes.png"
+    },
+    {
+        "merged": "E:\\AndroidStudio\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\app_notes.png",
+        "source": "E:\\AndroidStudio\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\app_notes.png"
+    },
+    {
+        "merged": "D:\\android\\NotePad-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\live_folder_notes.png",
+        "source": "D:\\android\\NotePad-master\\app\\src\\main\\res\\drawable-ldpi\\live_folder_notes.png"
+    }
+]
