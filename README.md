@@ -1,2 +1,3 @@
-# NotePad
-This is an AndroidStudio rebuild of google SDK sample NotePad
+# 期中作业Notepad
+## 姓名：林伟彬   学号： 116052017126 
+
