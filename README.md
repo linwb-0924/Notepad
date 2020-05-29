@@ -3,19 +3,19 @@
 
 ## 界面效果：
 
-### 点击编写按钮添加
+### 点击编写按钮添加进行添加笔记
 <img src="https://github.com/linwb-0924/Notepad/blob/master/image/1.jpg" width="375" />
 
-### 点击保存按钮保存
+### 在第一行输入标题，第二行开始输入正文，点击保存按钮保存
 <img src="https://github.com/linwb-0924/Notepad/blob/master/image/2.jpg" width="375" />
 
-### 添加后效果
+### 添加后界面效果
 <img src="https://github.com/linwb-0924/Notepad/blob/master/image/3.jpg" width="375" />
 
-### 进行搜索有结果
+### 进行搜索，当有搜索结果
 <img src="https://github.com/linwb-0924/Notepad/blob/master/image/4.jpg" width="375" />
 
-### 进行搜索无结果
+### 进行搜索，当无搜索结果
 <img src="https://github.com/linwb-0924/Notepad/blob/master/image/5.jpg" width="375" />
 ## 实验代码：
 ### NoteEditor.java（核心）
