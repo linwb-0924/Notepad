@@ -102,43 +102,43 @@
                         android:text="无搜索结果" />
                 </LinearLayout>
 
-        ### 修改NotesList一开始加载的布局文件
+### 修改NotesList一开始加载的布局文件
                 setContentView(R.layout.searchview);
-        ### 首先找到search组件，创造searchView得响应时间，根据传入得s进行搜索，然后写下selection语句NotePad.Notes.COLUMN_NAME_TITLE + " GLOB ‘" + s + "’"，运用getContentResolver().query对SQLite里面得数据进行搜索，PROJECTION则是在设置时间戳得时候已经书写好，如果s为空，则是把所有信息显示出来。最后更新adapter
-         private void SearchView(final SimpleCursorAdapter adapter) {
-                SearchView searchView = findViewById(R.id.search2);
-                searchView.setSubmitButtonEnabled(true);
-                searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                    @Override
-                    public boolean onQueryTextSubmit(String query) {
-                        return false;
-                    }
+### 首先找到search组件，创造searchView得响应时间，根据传入得s进行搜索，然后写下selection语句NotePad.Notes.COLUMN_NAME_TITLE + " GLOB ‘" + s + "’"，运用getContentResolver().query对SQLite里面得数据进行搜索，PROJECTION则是在设置时间戳得时候已经书写好，如果s为空，则是把所有信息显示出来。最后更新adapter
+                 private void SearchView(final SimpleCursorAdapter adapter) {
+                        SearchView searchView = findViewById(R.id.search2);
+                        searchView.setSubmitButtonEnabled(true);
+                        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                            @Override
+                            public boolean onQueryTextSubmit(String query) {
+                                return false;
+                            }
 
-                    @Override
-                    public boolean onQueryTextChange(String s) {
-                        Cursor newCursor;
+                            @Override
+                            public boolean onQueryTextChange(String s) {
+                                Cursor newCursor;
 
-                        if (!s.equals("")) {
-                            String selection = NotePad.Notes.COLUMN_NAME_TITLE + " GLOB '*" + s + "*'";
-                            newCursor = getContentResolver().query(
-                                    getIntent().getData(),
-                                    PROJECTION,
-                                    selection,
-                                    null,
-                                    NotePad.Notes.DEFAULT_SORT_ORDER
-                            );
-                        } else {
-                            newCursor = getContentResolver().query(
-                                    getIntent().getData(),
-                                    PROJECTION,
-                                    null,
-                                    null,
-                                    NotePad.Notes.DEFAULT_SORT_ORDER
-                            );
-                        }
-                        adapter.swapCursor(newCursor); // 视图将同步更新！
-                        return true;
+                                if (!s.equals("")) {
+                                    String selection = NotePad.Notes.COLUMN_NAME_TITLE + " GLOB '*" + s + "*'";
+                                    newCursor = getContentResolver().query(
+                                            getIntent().getData(),
+                                            PROJECTION,
+                                            selection,
+                                            null,
+                                            NotePad.Notes.DEFAULT_SORT_ORDER
+                                    );
+                                } else {
+                                    newCursor = getContentResolver().query(
+                                            getIntent().getData(),
+                                            PROJECTION,
+                                            null,
+                                            null,
+                                            NotePad.Notes.DEFAULT_SORT_ORDER
+                                    );
+                                }
+                                adapter.swapCursor(newCursor); // 视图将同步更新！
+                                return true;
+                            }
+                        });
                     }
-                });
-            }
 
